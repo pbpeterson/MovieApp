@@ -1,7 +1,7 @@
 import React from 'react';
 import { API_URL } from '../api';
 import UseFetch from '../Helper/Hooks/UseFetch';
-import Movies from './Movies';
+import Movies from './Movies/Movies';
 
 const FeedMovies = () => {
   const { request, data, loading, error } = UseFetch();

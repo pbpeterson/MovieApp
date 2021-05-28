@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+a,
+h1,
+h2,
+div,
+nav,
+header,
+img {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  padding: 20px 40px;
+}
+
+img {
+  width: 280px;
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+}
+
+.filme {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.filme:hover {
+  transform: scale(1.075, 1.075);
+}
+
+.filmes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.animaLeft {
+  animation: animaLeft 0.4s;
+}
+
+@keyframes animaLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
