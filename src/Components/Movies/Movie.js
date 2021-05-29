@@ -12,8 +12,9 @@ const Movie = () => {
   if (data)
     return (
       <div className="animaLeft">
+        {console.log(data)}
         <h1>{data.title}</h1>
-        <img src={`${GET_IMAGE}${data.poster_path}`} alt="" />
+        <img src={`${GET_IMAGE}${data.backdrop_path}`} alt="" />
       </div>
     );
   else return null;

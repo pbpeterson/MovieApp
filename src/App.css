@@ -41,6 +41,31 @@ form {
   transform: scale(1.075, 1.075);
 }
 
+.filmesHome {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  min-width: 800px;
+  padding: 10px 10px 10px 0;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.filmeHome {
+  min-width: 200px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.filmeHome img {
+  height: 300px;
+}
+
+.filmeHome:hover {
+  transform: scale(1.075, 1.075);
+}
+
 .filmes {
   display: flex;
   flex-wrap: wrap;

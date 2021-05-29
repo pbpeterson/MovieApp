@@ -4,10 +4,10 @@ import Head from './Helper/Head';
 
 const Home = () => {
   return (
-    <section>
+    <>
       <Head title="Home" />
       <FeedMovies />
-    </section>
+    </>
   );
 };
 

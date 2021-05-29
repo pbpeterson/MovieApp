@@ -5,6 +5,7 @@ import FeedMoviesLastest from './Components/FeedMoviesLastest';
 import FeedMoviesTrending from './Components/FeedMoviesTrending';
 import FeedSearchMovie from './Components/FeedSearchMovie';
 import Movie from './Components/Movies/Movie';
+import Serie from './Components/Movies/Serie';
 import Header from './Header';
 import Home from './Home';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="trending" element={<FeedMoviesTrending />} />
           <Route path="search/:id" element={<FeedSearchMovie />} />
           <Route path="filme/:id" element={<Movie />} />
+          <Route path="serie/:id" element={<Serie />} />
         </Routes>
       </BrowserRouter>
     </div>
