@@ -5,7 +5,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [movieName, setMovieName] = React.useState('');
   return (
-    <header className="header">
+    <header className="header container">
       <Link to="/populares" url={'top_rated?'}>
         Mais Populares
       </Link>

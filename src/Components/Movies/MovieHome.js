@@ -12,8 +12,8 @@ const MovieHome = ({ title, apiLink }) => {
   if (data) {
     return (
       <>
-        <h1>{title}</h1>
-        <div className="filmesHome">
+        <h1 className="container">{title}</h1>
+        <div className="filmesHome container">
           {data.results.map((filme) => (
             <div
               key={filme.id}

@@ -14,7 +14,10 @@ const Serie = () => {
     return (
       <div>
         <h1>{data.original_name}</h1>
-        <img src={`${GET_IMAGE}${data.poster_path}`} alt={data.original_name} />
+        <img
+          src={`${GET_IMAGE}${data.backdrop_path}`}
+          alt={data.original_name}
+        />
       </div>
     );
   } else return null;

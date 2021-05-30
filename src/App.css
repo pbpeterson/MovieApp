@@ -3,6 +3,7 @@
 }
 
 a,
+body,
 h1,
 h2,
 div,
@@ -12,8 +13,10 @@ img {
   margin: 0;
   padding: 0;
 }
-.App {
-  padding: 20px 40px;
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 img {
@@ -45,7 +48,7 @@ form {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  min-width: 800px;
+  min-width: 400px;
   padding: 10px 10px 10px 0;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -73,6 +76,58 @@ form {
 
 .animaLeft {
   animation: animaLeft 0.4s;
+}
+
+.movieMain {
+  display: flex;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.movieBanner {
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  min-width: 100vw;
+  height: 60vh;
+  display: flex;
+  align-items: flex-start;
+  touch-action: none;
+}
+
+.movieBanner img {
+  min-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+
+.prev {
+  padding: 10px 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  cursor: pointer;
+}
+
+.next {
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 60rem) {
+  .movieBanner {
+    height: auto;
+  }
 }
 
 @keyframes animaLeft {
