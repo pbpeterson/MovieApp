@@ -29,6 +29,17 @@ const MovieBanner = ({ movies }) => {
     setIncrementadorPos(incrementadorPos - 1);
   }
 
+  window.addEventListener('resize', () => {
+    const img = document.querySelector('img').scrollWidth;
+    const movie = document.querySelectorAll('.movieBanner');
+    if (incrementadorPos !== 0) {
+      movie[movieNav].style.transform = `translateX(-${
+        incrementadorPos * img
+      }px)`;
+    }
+    console.log(img);
+  });
+
   return (
     <div className="movieMain">
       {movies.map((currentMovie) => (
