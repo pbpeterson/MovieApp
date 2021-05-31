@@ -5,11 +5,13 @@ import { GET_IMAGE } from '../../api';
 const MovieBanner = ({ movies }) => {
   const [movieNav, setMovieNav] = React.useState(0);
   const [incrementadorPos, setIncrementadorPos] = React.useState(0);
+  const [moviment, setMoviment] = React.useState('');
   const navigate = useNavigate();
 
   function nextSlide() {
     const img = document.querySelector('img').scrollWidth;
     const movie = document.querySelectorAll('.movieBanner');
+    setMoviment('next');
     setMovieNav(movieNav + 1);
     setIncrementadorPos(incrementadorPos + 1);
     movie[movieNav + 1].style.transform = `translateX(-${
@@ -21,8 +23,9 @@ const MovieBanner = ({ movies }) => {
   function prevSlide() {
     const img = document.querySelector('img').scrollWidth;
     const movie = document.querySelectorAll('.movieBanner');
+    setMoviment('prev');
     setMovieNav(movieNav - 1);
-    movie[movieNav].style.transform = `translateX(+${
+    movie[movieNav].style.transform = `translateX(${
       (incrementadorPos + 1) * img
     }px)`;
     console.log(movieNav);
@@ -33,9 +36,15 @@ const MovieBanner = ({ movies }) => {
     const img = document.querySelector('img').scrollWidth;
     const movie = document.querySelectorAll('.movieBanner');
     if (incrementadorPos !== 0) {
-      movie[movieNav].style.transform = `translateX(-${
-        incrementadorPos * img
-      }px)`;
+      if (moviment === 'prev') {
+        movie[movieNav].style.transform = `translateX(+${
+          incrementadorPos * img
+        }px)`;
+      } else {
+        movie[movieNav].style.transform = `translateX(-${
+          incrementadorPos * img
+        }px)`;
+      }
     }
     console.log(img);
   });

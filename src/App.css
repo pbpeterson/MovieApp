@@ -80,11 +80,7 @@ form {
 
 .movieMain {
   display: flex;
-  overflow: scroll;
-}
-
-::-webkit-scrollbar {
-  display: none;
+  overflow-x: hidden;
 }
 
 .movieBanner {
@@ -101,9 +97,6 @@ form {
 .movieBanner img {
   min-width: 100%;
   max-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: auto;
   width: auto;
 }
@@ -119,7 +112,7 @@ form {
 .next {
   padding: 10px 20px;
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 50%;
   cursor: pointer;
 }
