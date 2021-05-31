@@ -80,18 +80,18 @@ form {
 
 .movieMain {
   display: flex;
-  overflow-x: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .movieBanner {
   transition: transform 1s ease-in-out;
   cursor: pointer;
-  position: relative;
   min-width: 100vw;
   height: 60vh;
   display: flex;
   align-items: flex-start;
-  touch-action: none;
+  scroll-snap-align: start;
 }
 
 .movieBanner img {
@@ -102,6 +102,8 @@ form {
 }
 
 .prev {
+  transition: transform 1s ease-in;
+  z-index: 1000;
   padding: 10px 20px;
   position: absolute;
   left: 0;
@@ -110,9 +112,10 @@ form {
 }
 
 .next {
+  transition: transform 1s ease-in;
   padding: 10px 20px;
   position: absolute;
-  right: 15px;
+  right: 0;
   top: 50%;
   cursor: pointer;
 }
