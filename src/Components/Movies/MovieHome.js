@@ -11,9 +11,9 @@ const MovieHome = ({ title, apiLink }) => {
   const navigate = useNavigate();
   if (data) {
     return (
-      <>
-        <h1 className="container">{title}</h1>
-        <div className="filmesHome container">
+      <div className="container">
+        <h1 className="title">{title}</h1>
+        <div className="filmesHome ">
           {data.results.map((filme) => (
             <div
               key={filme.id}
@@ -32,7 +32,7 @@ const MovieHome = ({ title, apiLink }) => {
             </div>
           ))}
         </div>
-      </>
+      </div>
     );
   } else return null;
 };

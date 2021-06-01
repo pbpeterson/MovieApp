@@ -5,6 +5,7 @@
 a,
 body,
 h1,
+ul,
 h2,
 div,
 nav,
@@ -78,20 +79,26 @@ form {
   animation: animaLeft 0.4s;
 }
 
-.movieMain {
+.slide {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  transition: transform 1s ease-in-out;
+}
+
+.slide li {
+  flex-shrink: 0;
+}
+
+.movieMain {
+  overflow: hidden;
 }
 
 .movieBanner {
-  transition: transform 1s ease-in-out;
   cursor: pointer;
   min-width: 100vw;
-  height: 60vh;
+  height: 65vh;
   display: flex;
   align-items: flex-start;
-  scroll-snap-align: start;
+  touch-action: none;
 }
 
 .movieBanner img {
@@ -102,7 +109,7 @@ form {
 }
 
 .prev {
-  transition: transform 1s ease-in;
+  transition: transform 1s ease-in-out;
   z-index: 1000;
   padding: 10px 20px;
   position: absolute;
