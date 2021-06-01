@@ -37,8 +37,35 @@ form {
 }
 
 .filme {
+  position: relative;
+  display: flex;
   cursor: pointer;
   transition: transform 0.3s;
+}
+
+.filme:hover .capa {
+  display: block;
+}
+
+.filme:hover .info {
+  display: block;
+}
+
+.capa {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.capaHome {
+  display: none;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
 }
 
 .filme:hover {
@@ -56,6 +83,9 @@ form {
 }
 
 .filmeHome {
+  z-index: 10;
+  height: 300px;
+  position: relative;
   min-width: 200px;
   transition: transform 0.3s;
   cursor: pointer;
@@ -68,6 +98,14 @@ form {
 
 .filmeHome:hover {
   transform: scale(1.075, 1.075);
+}
+
+.filmeHome:hover .capaHome {
+  display: block;
+}
+
+.filmeHome:hover .infoHome {
+  display: block;
 }
 
 .filmes {
@@ -90,12 +128,13 @@ form {
 
 .movieMain {
   overflow: hidden;
+  position: relative;
 }
 
 .movieBanner {
   cursor: pointer;
   min-width: 100vw;
-  height: 65vh;
+  height: 75vh;
   display: flex;
   align-items: flex-start;
   touch-action: none;
@@ -127,9 +166,25 @@ form {
   cursor: pointer;
 }
 
+.info {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  left: 45%;
+  top: 45%;
+}
+
+.infoHome {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  right: 40%;
+}
+
 @media (max-width: 60rem) {
   .movieBanner {
-    height: auto;
+    height: 50vh;
   }
 }
 

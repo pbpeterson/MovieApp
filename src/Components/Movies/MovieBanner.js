@@ -42,6 +42,7 @@ const MovieBanner = ({ movies }) => {
       <ul className="slide">
         {movies.map((currentMovie) => (
           <li key={currentMovie.id} className="movieBanner">
+            {console.log(currentMovie)}
             <img
               src={`${GET_IMAGE}${currentMovie.backdrop_path}`}
               alt={currentMovie.title}

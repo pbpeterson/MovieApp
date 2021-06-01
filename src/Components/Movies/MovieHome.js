@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import { GET_IMAGE } from '../../api';
 import UseFetch from '../../Helper/Hooks/UseFetch';
+import { ReactComponent as Info } from '../Assets/info.svg';
 
 const MovieHome = ({ title, apiLink }) => {
   const { request, data } = UseFetch();
@@ -29,6 +30,10 @@ const MovieHome = ({ title, apiLink }) => {
               }}
             >
               <img src={`${GET_IMAGE}${filme.poster_path}`} alt={filme.title} />
+              <div className="infoHome">
+                <Info />
+              </div>
+              <div className="capaHome"></div>
             </div>
           ))}
         </div>

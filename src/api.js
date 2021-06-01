@@ -18,4 +18,4 @@ export const API_TVSHOW = (id) => {
   return `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=pt-BR`;
 };
 
-export const GET_IMAGE = 'https://image.tmdb.org/t/p/w1280/';
+export const GET_IMAGE = 'https://image.tmdb.org/t/p/original/';

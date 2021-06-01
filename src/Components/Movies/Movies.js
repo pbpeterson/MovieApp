@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { GET_IMAGE } from '../../api';
+import { ReactComponent as Info } from '../Assets/info.svg';
 
 const Movies = ({ movie }) => {
   const navigate = useNavigate();
@@ -15,6 +16,10 @@ const Movies = ({ movie }) => {
           }}
         >
           <img src={`${GET_IMAGE}${filme.poster_path}`} alt={filme.title} />
+          <div className="info">
+            <Info />
+          </div>
+          <div className="capa"></div>
         </div>
       ))}
     </div>
