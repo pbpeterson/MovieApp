@@ -1,14 +1,20 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();
   const [movieName, setMovieName] = React.useState('');
   return (
     <header className="header container">
-      <Link to="/populares" url={'top_rated?'}>
-        Mais Populares
-      </Link>
+      <nav>
+        {' '}
+        <NavLink to="/" end>
+          Home
+        </NavLink>
+        <NavLink to="/lancamentos">Novos</NavLink>
+        <NavLink to="tv-show">TV Shows</NavLink>
+        <NavLink to="trending">Trending</NavLink>
+      </nav>
       <form
         onSubmit={() => {
           navigate(`search/${movieName}`);
@@ -18,6 +24,7 @@ const Header = () => {
           type="text"
           value={movieName}
           onChange={({ target }) => setMovieName(target.value)}
+          placeholder="Search"
         />
         <button>Enviar</button>
       </form>

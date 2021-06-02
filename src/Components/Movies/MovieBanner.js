@@ -33,7 +33,7 @@ const MovieBanner = ({ movies }) => {
   }
 
   return (
-    <div className="movieMain">
+    <div className="movieMain animaLeft">
       {movieNav !== 1 && (
         <button className="prev" onClick={prevSlide}>
           Prev

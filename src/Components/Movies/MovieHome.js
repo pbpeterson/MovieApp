@@ -12,7 +12,7 @@ const MovieHome = ({ title, apiLink }) => {
   const navigate = useNavigate();
   if (data) {
     return (
-      <div className="container">
+      <div className="container animaLeft movieHomeMT">
         <h1 className="title">{title}</h1>
         <div className="filmesHome ">
           {data.results.map((filme) => (

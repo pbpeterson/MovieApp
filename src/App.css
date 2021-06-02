@@ -15,6 +15,29 @@ img {
   padding: 0;
 }
 
+nav {
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+nav a.active::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #222;
+  display: block;
+  margin-top: 5px;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -29,7 +52,7 @@ img {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 form {
@@ -180,6 +203,14 @@ form {
   z-index: 10;
   top: 40%;
   right: 40%;
+}
+
+.movieHomeMT {
+  margin-top: 10px;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (max-width: 60rem) {

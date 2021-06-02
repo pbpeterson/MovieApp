@@ -4,7 +4,7 @@ import UseFetch from '../Helper/Hooks/UseFetch';
 import Movies from './Movies/Movies';
 
 const FeedMoviesLastest = () => {
-  const { request, data, loading, error } = UseFetch();
+  const { request, data } = UseFetch();
   React.useEffect(() => {
     request(API_LASTEST);
   }, [request]);

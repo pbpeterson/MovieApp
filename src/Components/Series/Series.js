@@ -7,15 +7,15 @@ const Movies = ({ movie }) => {
   const navigate = useNavigate();
   return (
     <div className="filmes container animaLeft">
-      {movie.map((filme) => (
+      {movie.map((serie) => (
         <div
-          key={filme.id}
+          key={serie.id}
           className="filme"
           onClick={() => {
-            navigate(`/filme/${filme.id}`);
+            navigate(`/serie/${serie.id}`);
           }}
         >
-          <img src={`${GET_IMAGE}${filme.poster_path}`} alt={filme.title} />
+          <img src={`${GET_IMAGE}${serie.poster_path}`} alt={serie.title} />
           <div className="info">
             <Info />
           </div>

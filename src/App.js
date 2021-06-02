@@ -4,6 +4,7 @@ import FeedMovies from './Components/FeedMovies';
 import FeedMoviesLastest from './Components/FeedMoviesLastest';
 import FeedMoviesTrending from './Components/FeedMoviesTrending';
 import FeedSearchMovie from './Components/FeedSearchMovie';
+import FeedTvShows from './Components/FeedTvShows';
 import Movie from './Components/Movies/Movie';
 import Serie from './Components/Movies/Serie';
 import Header from './Header';
@@ -17,8 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="top-rated" element={<FeedMovies />} />
-          <Route path="populares" element={<FeedMoviesLastest />} />
+          <Route path="lancamentos" element={<FeedMoviesLastest />} />
           <Route path="trending" element={<FeedMoviesTrending />} />
+          <Route path="tv-show" element={<FeedTvShows />} />
           <Route path="search/:id" element={<FeedSearchMovie />} />
           <Route path="filme/:id" element={<Movie />} />
           <Route path="serie/:id" element={<Serie />} />
