@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
+import { TiArrowLeftThick, TiArrowRightThick } from 'react-icons/ti';
 import { GET_IMAGE } from '../../api';
 
 const MovieBanner = ({ movies }) => {
@@ -36,7 +37,7 @@ const MovieBanner = ({ movies }) => {
     <div className="movieMain animaLeft">
       {movieNav !== 1 && (
         <button className="prev" onClick={prevSlide}>
-          Prev
+          <TiArrowLeftThick color="#fff" />
         </button>
       )}
       <ul className="slide">
@@ -55,7 +56,7 @@ const MovieBanner = ({ movies }) => {
       </ul>
       {movieNav < 20 && (
         <button className="next" onClick={nextSlide}>
-          Next
+          <TiArrowRightThick color="#fff" />
         </button>
       )}
     </div>

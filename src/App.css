@@ -52,7 +52,12 @@ img {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 20px 0;
+}
+
+.header a + a {
+  margin-left: 20px;
 }
 
 form {
@@ -93,6 +98,7 @@ form {
 
 .filme:hover {
   transform: scale(1.075, 1.075);
+  z-index: 100;
 }
 
 .filmesHome {
@@ -157,7 +163,7 @@ form {
 .movieBanner {
   cursor: pointer;
   min-width: 100vw;
-  height: 75vh;
+  height: 80vh;
   display: flex;
   align-items: flex-start;
   touch-action: none;
@@ -178,6 +184,15 @@ form {
   left: 0;
   top: 50%;
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prev svg,
+.next svg {
+  height: 30px;
+  width: 24px;
 }
 
 .next {
@@ -187,6 +202,9 @@ form {
   right: 0;
   top: 50%;
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .info {
@@ -216,6 +234,15 @@ form {
 @media (max-width: 60rem) {
   .movieBanner {
     height: 50vh;
+  }
+}
+
+@media (max-width: 40rem) {
+  .header {
+    flex-direction: column;
+  }
+  form {
+    margin-top: 20px;
   }
 }
 
