@@ -15,7 +15,9 @@ const Movies = ({ movie }) => {
             navigate(`/serie/${serie.id}`);
           }}
         >
-          <img src={`${GET_IMAGE}${serie.poster_path}`} alt={serie.title} />
+          <div className="imagem">
+            <img src={`${GET_IMAGE}${serie.poster_path}`} alt={serie.title} />
+          </div>
           <div className="info">
             <Info />
           </div>
