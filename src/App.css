@@ -37,6 +37,7 @@ nav a.active::after {
 }
 
 .container {
+  padding: 0 30px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -54,7 +55,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding-top: 20px;
+  margin-bottom: 30px;
 }
 
 .header a + a {
@@ -63,6 +65,28 @@ img {
 
 form {
   display: flex;
+}
+
+button {
+  padding: 8px 10px;
+  border: none;
+  background: #a2a2a2;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+input {
+  border: 2px solid #a2a2a2;
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-weight: bold;
+}
+
+input:focus {
+  outline: none;
 }
 
 .filme {
@@ -141,6 +165,8 @@ form {
 .filmes {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .animaLeft {
@@ -233,9 +259,16 @@ form {
 }
 
 .poster {
-  max-width: 300px;
+  max-width: 800px;
 }
 
+.flex {
+  display: flex;
+}
+
+.overview {
+  margin-left: 10px;
+}
 @media (max-width: 60rem) {
   .movieBanner {
     height: 50vh;
@@ -248,6 +281,9 @@ form {
   }
   form {
     margin-top: 20px;
+  }
+  .flex {
+    flex-direction: column;
   }
 }
 

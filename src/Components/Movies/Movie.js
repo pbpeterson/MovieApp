@@ -12,15 +12,18 @@ const Movie = () => {
   if (data)
     return (
       <div className="animaLeft container">
-        {console.log(data)}
         <h1>{data.title}</h1>
-        <img
-          className="poster"
-          src={`${GET_IMAGE}${data.backdrop_path}`}
-          alt={data.title}
-        />
-        <h3>{data.vote_average}</h3>
-        <p>{data.overview}</p>
+        <div className="flex">
+          <img
+            className="poster"
+            src={`${GET_IMAGE}${data.backdrop_path}`}
+            alt={data.title}
+          />
+          <div className="overview">
+            <h2>Sinopse</h2>
+            <p>{data.overview}</p>
+          </div>
+        </div>
       </div>
     );
   else return null;
